@@ -1,0 +1,442 @@
+<html>
+<head>
+    <title> ADOPSI </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <style>
+        html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, input, div{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+		    font-family:"Josefin Sans", sans-serif;
+        }
+        .nav{
+		    background-color: black;
+		    color: #fff;
+		    height: 100px;
+        }
+        .nav-logo{
+            float: left;
+            padding: 20px 40px;
+            font-size: 30px;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        li{
+            list-style: none;
+        }
+        .nav-list li {
+            float: right;
+            padding: 33px 60px;
+            font-size: 20px;
+        }
+        .nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 40px  25px;
+        }
+        .nav ul li a{
+            color:#fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .nav ul li a:hover{
+            color:#CD853F;
+            transition: .4s;
+        }
+        .btn{
+            background-color:#D2B48C;
+            color: white;
+            text-decoration: none;
+            border: 1px solid transparent;
+            font-weight: bold;
+            padding: 10px 5px;
+            border-radius: 30px;
+            transition: transform .4s; 
+        }
+        .btn:hover{
+            transform: scale(1.2);
+        }
+        .menu{
+            height: 555px;
+            padding: 50px 20px;
+            background-color:moccasin;
+            color:black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .menu h1{
+            padding: 0px 10px;
+            font-size: 30px;
+            padding-bottom: 40px;
+            color:black;
+        }
+        .menu h3{
+            padding: 0px 10px;
+            font-size: 15px;
+            color:black;
+        }
+        .syarat{
+            background-color:beige;
+            padding: 50px 20px;
+            color:black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .syarat h1{
+            padding: 0px 10px;
+            font-size: 30px;
+            padding-bottom: 40px;
+            color:black;
+        }
+        .syarat h2{
+            padding: 0px 10px;
+            font-size: 25px;
+            padding-bottom: 40px;
+            color:black;
+        }
+        li{
+            list-style:disc;
+            list-style-position:inside;
+
+        }
+        .syarat_list li {
+            padding: 0px 10px;
+            font-size: 15px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            text-align: justify;
+        }
+        .syarat ul li{
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .ketentuan{
+            background-color:beige;
+            color:black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .ketentuan h2{
+            padding: 50px 10px;
+            font-size: 25px;
+            padding-bottom: 40px;
+            color:black;
+        }
+        .ketentuan_list li {
+            padding: 5px 10px;
+            font-size: 15px;
+            padding-bottom: 5px;
+            padding-right: 20px;
+            text-align: justify;
+        }
+        .ketentuan ul li{
+            color:black;
+            text-decoration: none;;
+            text-transform: capitalize;
+        }
+        .form{
+            height:500px;
+            margin-top: 100px;
+        }
+        .title{
+            height: 20px;
+            margin-top: 20px;
+            text-align:center;
+            border-radius: 5px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .content{
+            height: 500px;
+            margin-top: 20px;
+            text-align:justify;
+        }
+        .content form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        form .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+          }
+          form .input-box span.details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        form .category label{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        form input[type="radio"]{
+            display: none;
+          }
+        form .button{
+            position:relative;
+            height: 50px;
+            margin: 50px 0;
+            text-align: center;
+          }
+          form .button input{
+            height: 100%;
+            width: 30%;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background:#CD853F;
+        }
+        form .button input:hover{
+           background:#D2B48C
+        }
+        footer{
+            position: relative;
+            padding: auto;
+            width: 100%;
+            height: 400px;
+            background: #101010;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:#DEB887;
+            border-radius: 50%;
+            margin: 22px 10px;
+            color:black;
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .end{
+            position: absolute;
+            color:#DEB887;
+            bottom: 35px;
+            font-size: 14px; 
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            background:#DEB887;
+            border-radius: 50%;
+            margin: 22px 10px;
+            color:black;
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .end{
+            position: absolute;
+            color:#DEB887;
+            bottom: 35px;
+            font-size: 14px; 
+        }
+</style>
+</head>
+<body>
+    <section>
+    <div class="nav">
+		<div class="nav-logo"><img src="pet.png" Height=50 Width=50 Align="top"/> CUTEPETS</div>
+		<div class="nav-list">
+		<div class="nav-list">
+			<ul> 
+                <li><a href="quotes.html" class="btn">Quotes</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+				<li><a href="donasi.html">Donasi</a></li>
+				<li><a href="adopsi1.html">Adopsi</a></li>
+				<li><a href="webutama.html">Home</a></li>
+			</ul>
+		</div>
+	</div>
+    </div>
+    </section>
+    <section>
+        <div class="menu">
+            <h1 ALIGN = "CENTER">Adopsi Kucing dan Anjing</h1>
+            <h3 ALIGN = "JUSTIFY">Fokus dari kegiatan kami adalah sterilisasi kucing/anjing jalanan melalui program Trap Neuter Return (TNR) atau tangkap, steril, dan lepaskan kembali. Akan tetapi, hampir semua koloni yang kami monitor berlokasi di pinggir jalan raya atau di ruang publik yang berbahaya. Maka kami juga memiliki program adopsi untuk kucing/anjing jalanan di Jakarta dan Depok yang kami monitor.
+                <br>
+            <h3 ALIGN = "JUSTIFY">Cukup sering ditemukan kucing/anjing dengan kondisi khusus, antara lain anak kucing/anjing, kucing/anjing hamil, kucing/anjing penuh luka, kucing/anjing sakit. Kami berusaha mencarikan mereka rumah yang dapat menampung untuk sementara (foster), atau keluarga yang bersedia mengadopsi untuk selamanya (adopter).</h3>
+                <br>
+            <h3 ALIGN = "JUSTIFY">Kualitas foster dan adopter yang kami cari sama. Kami berharap siapa pun yang berminat menjadi foster atau adopter untuk membaca ketentuan dan mengisi formulir permohonan adopsi kucing/anjing.</h3>
+                <br>
+            <h3 ALIGN = "JUSTIFY">Harapan kami semua kucing/anjing akan mendapatkan rumah yang aman dan keluarga yang menyayangi mereka. Kami juga berharap adopter menjadikan mereka bagian dari keluarga hingga akhir hayat mereka. Oleh karena itu, kami akan menolak calon orang tua asuh yang dianggap tidak memenuhi syarat.</h3>
+                <br>
+            <h3 ALIGN = "JUSTIFY">Kami mencari adopter dan tidak meminta bayaran atas kucing/anjing yang diadopsi. Akan tetapi, kami meminta adopter untuk menyediakan semua perlengkapan, membiayai pemeriksaan awal oleh dokter hewan. Adopter juga wajib membawa kucing/anjing untuk disteril dan divaksin pada waktunya. Selain itu, adopter harus menjemput kucing/anjing langsung, dan menerima kucing/anjing dengan tangan terbuka dalam kondisi apa pun mengingat mereka adalah kucing/anjing jalanan.</h3>
+            </h3>
+    </div>
+    <section>
+        <div class="syarat">
+            <h1 ALIGN="center">SYARAT DAN KETENTUAN </h1>
+            <h2 ALIGN="LEFT">Syarat untuk menjadi foster atau adopter :</h2>
+        <div class="syarat_list">
+            <ul>
+                <li>Bekerja sama dengan kami mulai dari awal proses tanya jawab, melengkapi dokumen dan persyaratan, hingga seterusnya demi kebaikan hewan adopsi.</li>
+                <li>Menandatangani Perjanjian Adopsi CUTEPETS sebelum atau saat menjemput kucing/anjingnya</li>
+                <li>Menerima kucin/anjingnya dalam kondisi apapun mengingat kucing/anjing yang diadopsi adalah kucing/anjing jalanan.</li>
+                <li>Mensteril dan memvaksinasi kucing/anjing yang diadopsi.</li>
+                <li>Menjemput langsung kucing/anjingnya di dokter hewan setelah pemeriksaan awal.</li>
+                <li>Bertanggung jawab penuh atas kehidupan dan kebutuhan hewan adopsi hingga akhir hayatnya.</li>
+                <li>Tidak akan dikonsumsi, digunakan sebagai pakan dan/atau dikembangbiakkan.</li>
+                <li>Dipelihara di dalam lingkungan semi outdoor dan pengawasan, namun diutamakan fully indoor.</li>
+                <li>Jika dikandangkan, wajib memberikan kesempatan berjalan-jalan di dalam rumah selama beberapa jam setiap harinya.</li>
+                <li>Mampu dan bersedia membawa ke dokter hewan dan/atau klinik kesehatan hewan jika sakit dan untuk mendapatkan vaksin, obat cacing, obat kutu dan pemeriksaan kesehatan secara berkala sesuai anjuran dokter hewan.</li>
+                <li>Menyetujui kesepakatan sterilisasi sesuai jadwal dan tempat yang disepakati, jika hewan belum disteril saat diadopsi.</li>
+                <li>Memiliki perlengkapan pemeliharaan dan kebutuhan harian.</li>
+            </ul>
+        <div class="ketentuan">
+            <h2 ALIGN="LEFT">Ketentuan untuk menjadi foster atau adopter :</h2>
+        <div class="kententuan_list">
+            <ul>
+                <li>WAJIB membaca dan melengkapi Formulir Perjanjian Adopsi dengan lengkap, akurat dan sebenar-benarnya, serta mematuhi isi formulir sebagai hukum yang mengikat bagi para pihak.</li>
+                <li>WAJIB mengisi, menandatangani dan mengirimkan Perjanjian Adopsi CUTEPETS melalui kontak yang tertera Atau, menandatangani saat menjemput hewan adopsi.</li>
+                <li>Jika calon orang tua asuh berumur di bawah 18 tahun, masih sekolah dan/atau belum berpenghasilan tetap, maka Perjanjian Adopsi CUTECAT WAJIB ditandatangani oleh wali dari calon orang tua asuh untuk memastikan agar hewan adopsi diterima sepenuhnya dan akan dipelihara bersama-sama keluarga calon orang tua asuh.</li>
+                <li>Jika calon orang tua asuh tinggal di rumah kontrakan atau kos-kosan bersama dengan penghuni lain, maka Perjanjian Adopsi CUTECAT WAJIB ditandatangani oleh pemilik dan semua penghuni kontrakan atau kos-kosan dari calon orang tua asuh untuk memastikan agar hewan adopsi diterima sepenuhnya dan akan dipelihara bersama-sama keluarga calon orang tua asuh.</li>
+                <li>memberikan data tambahan jika diperlukan baik melalui telepon, e-mail atau sarana komunikasi lainnya.</li>
+                <li>WAJIB mengizinkan kami untuk melakukan survei terhadap lingkungan rumah dan calon keluarga angkat.</li>
+                <li>WAJIB mengirimkan video yang memperlihatkan lingkungan rumah dan calon keluarga angkat, jika survei langsung tidak dapat dilakukan, melalui e-mail atau sarana komunikasi lainnya.</li>
+                <li>Diberikan masa percobaan selama 2 (dua) minggu untuk beradaptasi dengan hewan adopsi dan apabila terjadi ketidakcocokan WAJIB segera melaporkan melalui e-mail CUTEPETS untuk bersama-sama mencari solusi yang terbaik.</li>
+                <li>WAJIB memberikan kabar mengenai hewan adopsi (termasuk dalam bentuk foto) setidaknya sebulan sekali selama 3 (tiga) bulan pertama sejak diadopsi dan secara periodik, melalui e-mail CUTEPETS</li>
+                <li>WAJIB bekerja sama untuk bermusyawarah mencari solusi yang terbaik bagi hewan adopsi, dan mengganti biaya yang dikeluarkan untuk menyembuhkan hewan adopsi jika:
+                Hewan adopsi dibuang, diabaikan atau dikembalikan tanpa pemberitahuan,Kesepakatan dan tanggung jawab perawatan hewan jika sakit diabaikan,
+                Hewan adopsi membutuhkan perawatan akibat kelalaian dan kekejaman.</li>
+                <li>Jika tidak menunjukkan itikad baik untuk bekerja sama atau mempersulit upaya komunikasi, maka kami berhak melaporkan kepada pihak yang berwenang untuk meminta pertanggungjawaban sebagai orang tua asuh. Alasan-alasan kepentingan pribadi tanpa mempertimbangkan kesejahteraan dan masa depan hewan adopsi tidak dapat dibenarkan dan dapat dianggap sebagai kekejaman terhadap hewan (animal cruelty).</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+    </section>
+    <section>
+        <div class="form">
+            <div class="title">REGISTRASI</div>
+            <div class="content">
+              <form action="#">
+                <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nama Depan</span>
+                    <input type="text" placeholder="Masukkan Nama Depan Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nama Belakang</span>
+                    <input type="text" placeholder="Masukkan Nama Belakang Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Alamat Lengkap</span>
+                    <input type="text" placeholder="Masukkan Alamat Lengkap Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Masukkan Email Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Media Sosial (FB/IG/Twitter)</span>
+                    <input type="text" placeholder="Masukkan Media Sosial Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Usia</span>
+                    <input type="text" placeholder="Masukkan Usia Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nomor HP</span>
+                    <input type="text" placeholder="Masukkan Nomor HP Anda" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Pekerjaan</span>
+                    <input type="text" placeholder="Masukkan Pekerjaan Anda" required>
+                </div>
+            </div>
+                <div class="button">
+                  <input type="submit" value="Registrasi">
+                </div>
+              </form>
+            </div>
+          </div>
+  </div>
+  </section>
+    <section>
+        <footer>
+            <p ALIGN="CENTER">For More Info <br> please click on the link below to subscribe to our channel :</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="end"> CopyRight By Kelompok 5</p>
+        </footer>
+    </section>
+</div>
+</body>
+</html>

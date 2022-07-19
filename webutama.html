@@ -1,0 +1,286 @@
+<html>
+<head>
+    <title> Animal Shelter </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <style>
+        html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, input, div{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+		    font-family:"Josefin Sans", sans-serif;
+        }
+        .nav{
+		    background-color: black;
+		    color: #fff;
+		    height: 100px;
+        }
+        .nav-logo{
+            float: left;
+            padding: 20px 40px;
+            font-size: 30px;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        li{
+            list-style: none;
+        }
+        .nav-list li {
+            float: right;
+            padding: 33px 60px;
+            font-size: 20px;
+        }
+        .nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 40px  25px;
+        }
+        .nav ul li a{
+            color:#fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .nav ul li a:hover{
+            color:#CD853F;
+            transition: .4s;
+        }
+        .btn{
+            background-color:#D2B48C;
+            color: white;
+            text-decoration: none;
+            border: 1px solid transparent;
+            font-weight: bold;
+            padding: 10px 5px;
+            border-radius: 30px;
+            transition: transform .4s; 
+        }
+        .btn:hover{
+            transform: scale(1.2);
+        }
+        .header{
+            height: 555px;
+            padding: 50px 20px;
+            background-color: black;
+            color: #fff;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .header h1{
+            padding: 150px 10px;
+            font-size: 70px;
+            padding-bottom: 20px;
+            color:#D2B48C;
+        }
+        .header h2{
+            padding: 0px 10px;
+            font-size: 20px;
+            color:#FFF5EE;
+        }
+        .contents{
+            padding: 100px 80px;
+            background-color: black;
+            color: #fff;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            margin: auto;
+            padding-bottom: 150px;
+            background-color:black;
+        }
+        .cards{
+            width: 300px;
+            height: 400px;
+            background: #ffe4b5;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: inset 0 0 0 0 rgb(245, 222, 179);
+            transition: ease-out 1s;
+        }
+        .head{
+            background-color: #D2B48C;
+            color:#101010;
+            line-height: 70px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        .body{
+            font-size: 17px;
+            color:saddlebrown;
+            font-weight: 700;
+            text-align: center;
+            padding: 50px 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .body span{
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .cards:hover{
+            box-shadow: inset 0 450px 0 0 #ffdab9;
+            height: 450px;
+            width: 300px;
+        }
+        .card_button{
+            background-color:#D2B48C;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 20px;
+            border-radius: 30px;
+            transition: .4s; 
+        }
+        .card_button:hover{
+            background-color:#ffdab9;
+            border: 2px solid #D2B48C;
+            cursor: pointer;
+        }
+        .quotes{
+            width: 100%;
+            height: 600px;
+            background-image: url('ha.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quotes p{
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        footer{
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: #101010;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:#DEB887;
+            border-radius: 50%;
+            margin: 22px 10px;
+            color:black;
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .end{
+            position: absolute;
+            color:#DEB887;
+            bottom: 35px;
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+		<div class="nav-logo"><img src="pet.png" Height=50 Width=50 Align="top"/> CUTEPETS</div>
+		<div class="nav-list">
+		<div class="nav-list">
+			<ul> 
+                <li><a href="quotes.html" class="btn">Quotes</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+				<li><a href="donasi.html">Donasi</a></li>
+				<li><a href="adopsi1.html">Adopsi</a></li>
+				<li><a href="webutama.html">Home</a></li>
+			</ul>
+		</div>
+	</div>
+    <div class="header">
+        <img src = "lucu.png" Height=510 Width=510 Align="left">
+        <h1 ALIGN ="right"> Kucing dan Anjing Jalanan Butuh Bantuanmu. </h1>  
+        <h2 ALIGN ="right"> Ayo beraksi nyata untuk membantu mereka! </h2>
+    </div>
+    <div class="contents">
+            <h1 ALIGN ="center"> Program : </h1>  
+    </div>
+    <div class="container">
+        <div class="cards">
+            <div class="head">
+                <h1>Adopsi</h1>
+            </div>
+            <div class="body">
+                <p>Anda dapat menolong dengan mengadopsi setidaknya 1 kucing/anjing jalanan. Kami membutuhkan kelurga yang mampu menjadi pemelihara yang amanah dan bertanggung jawab, khususnya untuk kucing/anjing yang berkebutuhan khusus, dan kucing/anjing yang sakit.</p>
+            </div>
+            <p style="text-align: center;">
+            <a class="card_button" href="adopsi1.html">Adopsi</a>
+        </div>
+        <div class="cards">
+            <div class="head">
+                <h1>Donasi</h1>
+            </div>
+            <div class="body">
+                <p>Anda dapat memberikan donasi untuk menolong kucing/anjing jalanan melalui TNR (Trap Neuter/Spay Return) atau Tangkap Steril Lepas. Donasi digunakan untuk sterilisasi kucing/anjing termasuk rawat inap dan transportasi, pengobatan kucing/anjing yang sakit.</p>
+            </div>
+            <p style="text-align: center;">
+            <a class="card_button" href="donasi.html">Donasi</a>
+        </div>
+        <div class="cards">
+            <div class="head">
+                <h1>Artikel</h1>
+            </div>
+            <div class="body">
+                <p>Anda dapat membaca informasi bermanfaat agar lebih memahami cara menolong kucing/anjing jalanan dan menjadi pemelihara yang bertanggung jawab. Kami mengajak Anda untuk  berbagi pengalaman dan cerita melalui situs web dan media sosial kami.</p>
+            </div>
+            <p style="text-align: center;">
+            <a class="card_button" href="artikel.html">Artikel</a>
+        </div>
+    </div>
+        <div class="quotes">
+            <p>“We can judge the heart of a people by their treatment of animals.”</p>
+            <p ALIGN="center"> -Immanuel Kant</p>
+        </div>
+      
+        <footer>
+            <p ALIGN="CENTER">For More Info <br> please click on the link below to subscribe to our channel :</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="end"> CopyRight By Kelompok 5</p>
+        </footer>
+</div>
+</body>
+</html>

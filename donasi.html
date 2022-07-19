@@ -1,0 +1,317 @@
+<html>
+<head>
+    <title> DONASI </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <style>
+        html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, input, div{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+		    font-family:"Josefin Sans", sans-serif;
+        }
+        .nav{
+		    background-color: black;
+		    color: #fff;
+		    height: 100px;
+        }
+        .nav-logo{
+            float: left;
+            padding: 20px 40px;
+            font-size: 30px;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        li{
+            list-style: none;
+        }
+        .nav-list li {
+            float: right;
+            padding: 33px 60px;
+            font-size: 20px;
+        }
+        .nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 40px  25px;
+        }
+        .nav ul li a{
+            color:#fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        .nav ul li a:hover{
+            color:#CD853F;
+            transition: .4s;
+        }
+        .btn{
+            background-color:#D2B48C;
+            color: white;
+            text-decoration: none;
+            border: 1px solid transparent;
+            font-weight: bold;
+            padding: 10px 5px;
+            border-radius: 30px;
+            transition: transform .4s; 
+        }
+        .btn:hover{
+            transform: scale(1.2);
+        }
+        .menu{
+            height: 555px;
+            padding: 50px 20px;
+            background-color:moccasin;
+            color:black;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .menu h1{
+            padding: 0px 10px;
+            font-size: 30px;
+            padding-bottom: 40px;
+            color:black;
+        }
+        .menu h3{
+            padding: 0px 10px;
+            font-size: 15px;
+            color:black;
+        }
+        .form{
+            height:100px;
+            margin-top: 100px;
+        }
+        .title{
+            height: 20px;
+            margin-top: 20px;
+            text-align:center;
+            border-radius: 5px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .content{
+            height: 500px;
+            margin-top: 20px;
+            text-align:justify;
+        }
+        .content form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        form .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+          }
+        form .input-box span.details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        form .category label{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        form .button{
+            position:relative;
+            height: 70px;
+            margin: 70px 0;
+            text-align: center;
+          }
+          form .button input{
+            height: 100%;
+            width: 40%;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background:#CD853F;
+        }
+        form .button input:hover{
+           background:#D2B48C
+        }
+        footer{
+            position: relative;
+            padding: auto;
+            width: 100%;
+            height: 400px;
+            background: #101010;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:#DEB887;
+            border-radius: 50%;
+            margin: 22px 10px;
+            color:black;
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .end{
+            position: absolute;
+            color:#DEB887;
+            bottom: 35px;
+            font-size: 14px; 
+        }
+        footer p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            background:#DEB887;
+            border-radius: 50%;
+            margin: 22px 10px;
+            color:black;
+            position: relative;
+            text-decoration: none;
+            font-size: 20px;
+            }
+        .social a:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        .end{
+            position: absolute;
+            color:#DEB887;
+            bottom: 35px;
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+		<div class="nav-logo"><img src="pet.png" Height=50 Width=50 Align="top"/> CUTEPETS</div>
+		<div class="nav-list">
+		<div class="nav-list">
+			<ul> 
+                <li><a href="quotes.html" class="btn">Quotes</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+				<li><a href="donasi.html">Donasi</a></li>
+				<li><a href="adopsi1.html">Adopsi</a></li>
+				<li><a href="webutama.html">Home</a></li>
+			</ul>
+		</div>
+    </div>
+    </div>
+    <div class="menu">
+        <h1 align = "center"> Donasi untuk Kucing dan Anjing</h1>
+        <h3 align = "justify"> Kepedulian Anda akan nasib kucing/anjing jalanan dapat disalurkan dengan memberikan donasi untuk kucing/anjing jalanan. Kami mengajak semua orang khususnya street feeder yang memberi makan kucing/anjing di koloni yang kami monitor untuk berkontribusi. Karena memberi makan tanpa melakukan sterilisasi akan menyebabkan kucing/anjing jalanan berkembang biak lebih cepat. </h3><br></br>
+        <h3 align = "justify">Donasi untuk kucing/anjing jalanan yang kami terima akan dimanfaatkan untuk pengobatan kucing/anjing yang sakit, obat cacing dan obat kutu, sterilisasi yang mencakup rawat inap dan antar jemput. Kami akan berupaya memastikan semua kucing/anjing dalam keadaan sehat sebelum disteril atau dilepaskan kembali.</h3><br></br>
+        <h3 align = "justify">Kami juga mengutamakan kucing/anjing betina untuk disteril lebih dahulu jika ditemukan kucing/anjing betina yang siap disteril. Jika kami menemukan anak kucing/anjing yang terpisah dari induknya atau dibuang, kami akan berupaya mencarikan adopter atau keluarga angkat sementara. </h3> <br> </br>
+        <h3 align = "justify">Anda dapat berdonasi dengan menggunakan kartu kredit melalui formulir di bawah ini, transfer ke rekening bank kami atau dengan e-money yang informasinya tersedia setelah formulir berikut. Laporan akan kami kirimkan melalui e-mail setiap satu atau dua bulan sekali. Maka kami membutuhkan konfirmasi dan alamat e-mail Anda.</h3>
+    </div>
+    </div>
+    <div class="form">
+        <div class="title">Form Donasi</div>
+    </div>
+    <div class="table-item">
+        <div class="content">
+            <form action="#">
+              <div class="user-details">
+              <div class="input-box">
+                  <span class="details">Nama Depan</span>
+                  <input type="text" placeholder="Masukkan Nama Depan Anda" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Nama Belakang</span>
+                <input type="text" placeholder="Masukkan Nama Belakang Anda" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Masukkan Email Anda" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Pekerjaan</span>
+                <input type="text" placeholder="Masukkan Pekerjaan Anda" required>
+            </div>
+            <div class="input-box">
+                <span class="details">No. Telepon</span>
+                <input type="text" placeholder="Masukkan No Telepon Anda" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Nominal yang akan di Donasikan</span>
+                <input type="text" placeholder="Masukkan Nominal Donasi Anda" required>
+            </div>
+            </div>
+            <h5 align="center"> *Proses selanjutnya akan dilanjutkan melalui Nomor Telepon. Kami akan menghubungi anda dalam rentan waktu 1x24 jam. </h5>
+            <div class="button">
+            <input type="submit" value="Lanjut ke tahap selanjutnya">
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p ALIGN="CENTER">For More Info <br> please click on the link below to subscribe to our channel :</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="end"> CopyRight By Kelompok 5</p>
+    </footer>
